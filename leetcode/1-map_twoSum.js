@@ -22,12 +22,12 @@ const twoSum = function(nums, target) {
     for(let i = 0; i < nums.length; i ++) {
         if(map.has(target - nums[i])) {
             map.get(target - nums[i]), i;
-            console.log('map has: ' + (target - nums[i]));
-            console.log(map);
+            // console.log('map has: ' + (target - nums[i]));
+            // console.log(map);
         } else {
             map.set(nums[i], i);
-            console.log("map doesn't has: " + (target - nums[i]) + " / " + target + '(target) - ' + nums[i] + ' (num['+ i + '])');
-            console.log(map);
+            // console.log("map doesn't has: " + (target - nums[i]) + " / " + target + '(target) - ' + nums[i] + ' (num['+ i + '])');
+            // console.log(map);
         }
     }
 	return [];
