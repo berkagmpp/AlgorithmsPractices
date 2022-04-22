@@ -23,7 +23,7 @@ function cutTheSticks(arr) {
     let array = [...arr];
     let count = [arr.length];
  
-    for (let i = 0; i < array.length;) {
+    for (let i = 0; i < array.length;) {    // array.length is reduced, so, i must stay! 
         array = array.map(x => x - Math.min(...array)).filter(y => y != 0);
         count.push(array.length);
     }
