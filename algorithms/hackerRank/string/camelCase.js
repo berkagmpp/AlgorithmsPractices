@@ -10,7 +10,7 @@ function camelcase(s) {
     // 1. for of
     let count = 1;
     for (const x of s) {
-        if (x.toLowerCase() != x) {
+        if (x.toLowerCase() != x) {     // toLowerCase() fn does NOT change variable's value, only returns. if the original value of x.toLowerCase() is different with x's value, count++ 
             count++;
         }
     }
