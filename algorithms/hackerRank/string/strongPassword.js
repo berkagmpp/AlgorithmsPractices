@@ -18,48 +18,14 @@ const password = 'Ab12#';
 // Output: 1
 
 function minimumNumber(n, password) {
-    let count = 0;
-    let special = 0;
-    let num = 0;
+    let fail = 0;
 
-    if (password.toLowerCase() === password) {
-        count++;
-    }
+    fail += (password.match(/[0-9]/) || []).length;
+    fail += (password.match(/[a-z]/) || []).length;
+    fail += (password.match(/[A-Z]/) || []).length;
+    fail += (password.match(/[\!@#\$%^&\*\(\)\-\+]/) || []).length;
 
-    if (password.toUpperCase() === password) {
-        count++;
-    }
-
-    for (let s of "@#$%^&*()-+".split('')) {
-        if (password.includes(s)) {
-            special++;
-        } 
-    }
-    
-    for (let n of "0123456789".split('').map(Number)) {
-        if (password.includes(n)) {
-            num++;
-        } 
-    }
-    
-    if (special === 0) {
-        count++;
-    }
-        
-    if (num === 0) {
-        count++;
-    }
-
-    if (n < 6) {
-        let len = 6 - n; 
-        if (len > count) {
-            count = len;
-        } else if (count > len) {
-            count;
-        }
-    }
-
-    return count;
+    return Math.max(4-fail, 6-n);
 }
 
 console.log(minimumNumber(n, password));
