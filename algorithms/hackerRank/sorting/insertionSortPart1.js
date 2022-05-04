@@ -9,7 +9,7 @@
 // When the next lower indexed value is smaller than arr[4], insert the stored value at the current index and print the entire array.
 
 const n = 5;
-const arr = [2, 4, 6, 8, 3];
+let arr = [2, 4, 6, 8, 3];
 
 function insertionSort1(n, arr) {
     const num = arr[n - 1];
@@ -24,4 +24,6 @@ function insertionSort1(n, arr) {
         }
     }
 }
+
+console.log(insertionSort1(n, arr));
 
