@@ -10,6 +10,11 @@
 
 const n = 5;
 let arr = [2, 4, 6, 8, 3];
+// Output: 
+// 2 4 6 8 8
+// 2 4 6 6 8
+// 2 4 4 6 8
+// 2 3 4 6 8
 
 function insertionSort1(n, arr) {
     const num = arr[n - 1];
