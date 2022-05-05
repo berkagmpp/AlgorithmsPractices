@@ -4,7 +4,7 @@
 //     you must also give a loaf of bread to the person immediately in front of or behind them in the line (i.e., persons i + 1 or i - 1).
 // 2. After all the bread is distributed, each person must have an even number of loaves.
 
-const B = [2, 6];
+const B = [2, 3, 4, 5, 6];
 // Output: 4
 
 function fairRations(B) {
