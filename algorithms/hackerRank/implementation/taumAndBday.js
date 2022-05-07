@@ -21,6 +21,7 @@ const z = 1;    // the cost to convert one color gift to the other color
 
 function taumBday(b, w, bc, wc, z) {
 
+    // below BigInt needed to pass the test with BigInt
     bc = BigInt(bc);
     wc = BigInt(wc);
     b = BigInt(b);
