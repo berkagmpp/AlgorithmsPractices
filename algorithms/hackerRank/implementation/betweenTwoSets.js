@@ -16,18 +16,16 @@ const b = [16, 32, 96];
 
 function getTotalX(a, b) {
     let count = 0;
+
     for (let x = 1; x <= 100; x++) {
-        if (a.every(num => x % num == 0)) {
-            if (b.every(num => num % x == 0)) {
+        if (a.every(num => x % num == 0)) {     // Common Multiple
+            if (b.every(num => num % x == 0)) {     // Common Divider
                 count++;
             }
         }
     }
+    
     return count;
-
-
-
-
 }
 
 console.log(getTotalX(a, b));
