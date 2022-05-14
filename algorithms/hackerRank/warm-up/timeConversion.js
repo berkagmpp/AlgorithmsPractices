@@ -23,7 +23,7 @@ function timeConversion(s) {
     let s2 = s;
 
     if (s.includes('P')) {
-        oclock = (parseInt(oclock) + 12).toString()
+        oclock = (parseInt(oclock) + 12).toString();
         if (oclock === '24') {
             oclock = '12';
         };
@@ -39,3 +39,8 @@ function timeConversion(s) {
 }
 
 console.log(timeConversion(s));
+
+// function running time check
+// console.time(timeConversion);
+// timeConversion(s);
+// console.timeEnd(timeConversion); 
