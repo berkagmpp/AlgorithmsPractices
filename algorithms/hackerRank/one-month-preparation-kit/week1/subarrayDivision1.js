@@ -7,6 +7,11 @@
 // - The sum of the integers on the squares is equal to his birth day.
 // Determine how many ways she can divide the chocolate.
 
+// [4]
+// 4
+// 1
+
+
 const s = [1, 2, 1, 3, 3];
 const d = 3;    // sum 
 const m = 2;    // length
@@ -19,12 +24,11 @@ function birthday(s, d, m) {
 
     for (let i = 0; i < s.length; i++) {
         let arr = (s.slice(i, m + i));
-        // console.log(arr);
         if (arr.length === m && arr.reduce((acc, cur) => acc + cur) === d) {
             count++;
         }
     }
-    
+
     return count;
 }
 
