@@ -17,3 +17,9 @@ function pageCount(n, p) {
 }
 
 console.log(pageCount(n, p));
+
+
+// function running time check
+console.time(pageCount);
+pageCount(n, p);
+console.timeEnd(pageCount); 

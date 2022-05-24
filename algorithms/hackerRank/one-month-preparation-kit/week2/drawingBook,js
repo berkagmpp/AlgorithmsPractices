@@ -1,0 +1,32 @@
+'use strict';
+
+// Given n and p, find and print the minimum number of pages that must be turned in order to arrive at page p.
+
+const n = 50;    //  the number of pages in the book
+const p = 40;    //  the page number to turn to
+// output: 1
+
+function pageCount(n, p) {
+    let num = 0;
+
+    if (p === 1 || p === n) {
+        return num;
+    }
+
+    n - p >= p ? num = Math.floor(p / 2) : num = Math.floor(n / 2) - Math.floor(p / 2);
+
+    // num = Math.floor(p / 2);
+
+    // if (num >= Math.floor(n / 2) / 2) {
+    //     num = Math.floor(n / 2) - num;
+    // }
+
+    return num;
+}
+
+console.log(pageCount(n, p));
+
+// function running time check
+console.time(pageCount);
+pageCount(n, p);
+console.timeEnd(pageCount); 
