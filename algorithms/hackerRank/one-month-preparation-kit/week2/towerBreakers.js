@@ -17,7 +17,7 @@ const m = 4;    // the height of each tower
 
 function towerBreakers(n, m) {
 
-    if (n % 2 === 0 || m === 1) {
+    if (n % 2 === 0 || m === 1) {   // !(n % 2) is same as (n % 2 === 0)
         return 2;
     }
     return 1;
