@@ -13,37 +13,20 @@ const k = 4;
 // Output: 8
 
 function superDigit(n, k) {
-    let sum;
+    n = parseInt(n);
 
-    const strDgt = (n) => {
-        return n.split("").reduce((acc, curr, i, a) => acc + parseInt(curr), 0);
+    if (n < 10) {
+        return n;
     }
 
-    strDgt(n);
-
-
-
-    // if (parseInt(n) < 10) return parseInt(n);
-
-
-    // while (cal === true) {
-    //     for (let num of arr) {
-    //         sum += parseInt(num);
-    //         console.log(sum);
-    //     }
-    //     totalSum = sum * k;
-    //     console.log(totalSum);
-
-    //     if (totalSum > 9) {
-    //         arr = totalSum.toString().split('');
-    //         console.log(arr);
-    //     } else {
-    //         return totalSum;
-    //     }
-
-    // }
-    // return nSum;
-    // console.log(sum);
+    return superDigit(
+        n.toString()
+            .split('')
+            .reduce(
+                (acc, cur) => acc + (cur | 0), 0
+            )
+        * k, 1
+    );
 }
 
 console.log(superDigit(n, k));
